@@ -2,7 +2,7 @@
 
 require_once 'Metodosestaticos.php';
 
-class heredero extends MetodosEstaticos
+class heredero extends Metodosestaticos
 {
     public function saludo()
     {
