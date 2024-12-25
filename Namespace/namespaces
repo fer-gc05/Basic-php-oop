@@ -1,0 +1,32 @@
+En PHP, un namespace es una forma de organizar y agrupar clases, interfaces, funciones y constantes bajo un mismo espacio de nombres,
+evitando conflictos entre elementos que tienen el mismo nombre pero están definidos en diferentes partes de un proyecto.
+Se definen con la palabra clave namespace.
+
+namespace MiProyecto;
+
+class MiClase {
+    public function saludar() {
+        return "Hola desde MiProyecto!";
+    }
+}
+
+Para usar elementos de un namespace, se pueden especificar explícitamente con su nombre completo o importarlos con use:
+
+require 'MiClase.php';
+
+use MiProyecto\MiClase;
+
+$obj = new MiClase();
+echo $obj->saludar();
+
+
+Ventajas:
+Evitan colisiones de nombres: Útil en proyectos grandes o con librerías externas.
+Mejor organización del código: Similar a directorios en un sistema de archivos.
+Facilitan la interoperabilidad: Permiten trabajar con diferentes bibliotecas sin conflictos.
+
+Desventajas:
+Mayor complejidad: Puede ser confuso al principio, especialmente en proyectos pequeños.
+Nombres largos: Al usar nombres completos, puede ser tedioso escribirlos en cada uso.
+Posibles conflictos: Si se usan mal, pueden causar errores difíciles de depurar.
+
